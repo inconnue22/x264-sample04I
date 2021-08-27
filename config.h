@@ -1,6 +1,4 @@
 #define HAVE_MALLOC_H 1
-#define HAVE_X86_INLINE_ASM 1
-#define HAVE_MMX 1
 #define ARCH_X86_64 1
 #define SYS_LINUX 1
 #define STACK_ALIGNMENT 64
@@ -19,11 +17,12 @@
 #define fseek fseeko
 #define ftell ftello
 #define HAVE_BITDEPTH10 1
-#define CHROMA_FORMAT CHROMA_400
+#define CHROMA_FORMAT CHROMA_444
 #define HAVE_GPL 1
 #define HAVE_INTERLACED 1
 #define HAVE_ALTIVEC 0
 #define HAVE_ALTIVEC_H 0
+#define HAVE_MMX 0
 #define HAVE_ARMV6 0
 #define HAVE_ARMV6T2 0
 #define HAVE_NEON 0
@@ -35,6 +34,7 @@
 #define HAVE_GPAC 0
 #define HAVE_CPU_COUNT 0
 #define HAVE_OPENCL 0
+#define HAVE_X86_INLINE_ASM 0
 #define HAVE_AS_FUNC 0
 #define HAVE_INTEL_DISPATCHER 0
 #define HAVE_MSA 0
