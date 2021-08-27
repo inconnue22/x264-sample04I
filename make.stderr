@@ -1,3 +1,12 @@
+x264.c: In function ‘parse’:
+x264.c:1396:9: warning: variable ‘b_thread_input’ set but not used [-Wunused-but-set-variable]
+ 1396 |     int b_thread_input = 0;
+      |         ^~~~~~~~~~~~~~
+In file included from encoder/analyse.c:3894:
+encoder/slicetype.c: In function ‘slicetype_frame_cost’:
+encoder/slicetype.c:903:40: warning: variable ‘s’ set but not used [-Wunused-but-set-variable]
+  903 |                 x264_slicetype_slice_t s[X264_LOOKAHEAD_THREAD_MAX];
+      |                                        ^
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
 encoder/set.c: In function ‘x264_8_sei_recovery_point_write’:
@@ -142,6 +151,11 @@ encoder/set.c:793:24: note: while referencing ‘tmp_buf’
 encoder/set.c:793:5: note: in expansion of macro ‘ALIGNED_4’
   793 |     ALIGNED_4( uint8_t tmp_buf[100] );
       |     ^~~~~~~~~
+In file included from encoder/analyse.c:3894:
+encoder/slicetype.c: In function ‘slicetype_frame_cost’:
+encoder/slicetype.c:903:40: warning: variable ‘s’ set but not used [-Wunused-but-set-variable]
+  903 |                 x264_slicetype_slice_t s[X264_LOOKAHEAD_THREAD_MAX];
+      |                                        ^
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
 encoder/set.c: In function ‘x264_10_sei_recovery_point_write’:
