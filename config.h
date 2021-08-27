@@ -18,8 +18,7 @@
 #define ftell ftello
 #define HAVE_BITDEPTH8 1
 #define HAVE_BITDEPTH10 1
-#define CHROMA_FORMAT CHROMA_422
-#define HAVE_GPL 1
+#define CHROMA_FORMAT CHROMA_444
 #define HAVE_INTERLACED 1
 #define HAVE_OPENCL (BIT_DEPTH==8)
 #define HAVE_ALTIVEC 0
@@ -34,6 +33,7 @@
 #define HAVE_WIN32THREAD 0
 #define HAVE_THREAD 0
 #define HAVE_GPAC 0
+#define HAVE_GPL 0
 #define HAVE_CPU_COUNT 0
 #define HAVE_X86_INLINE_ASM 0
 #define HAVE_AS_FUNC 0
