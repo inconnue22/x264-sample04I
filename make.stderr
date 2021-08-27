@@ -1,3 +1,7 @@
+./common/opencl.c:116:10: fatal error: common/oclobj.h: No such file or directory
+  116 | #include "common/oclobj.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
 x264.c: In function ‘parse’:
 x264.c:1396:9: warning: variable ‘b_thread_input’ set but not used [-Wunused-but-set-variable]
  1396 |     int b_thread_input = 0;
