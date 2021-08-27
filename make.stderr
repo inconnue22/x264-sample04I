@@ -1,0 +1,4 @@
+./common/opencl.c:116:10: fatal error: common/oclobj.h: No such file or directory
+  116 | #include "common/oclobj.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
