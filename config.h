@@ -20,6 +20,7 @@
 #define ftell ftello
 #define HAVE_BITDEPTH8 1
 #define HAVE_BITDEPTH10 1
+#define CHROMA_FORMAT CHROMA_420
 #define HAVE_INTERLACED 1
 #define HAVE_OPENCL (BIT_DEPTH==8)
 #define HAVE_ALTIVEC 0
