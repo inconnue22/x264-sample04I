@@ -21,7 +21,7 @@ int main (void) {  return 0; }
 checking for -Werror=attributes... yes
 checking for -Werror=ignored-attributes... yes
 x264 configure script
-Command line options: "--disable-asm" "--disable-gpl" "--disable-thread" "--disable-interlaced" "--bit-depth=8" "--chroma-format=420" "--disable-bashcompletion"
+Command line options: "--disable-asm" "--disable-gpl" "--disable-thread" "--disable-win32thread" "--bit-depth=all" "--chroma-format=444" "--enable-bashcompletion"
 
 checking whether gcc works... yes
 checking whether gcc supports for( int i = 0; i < 9; i++ ); with -std=gnu99... yes
@@ -58,6 +58,11 @@ checking for fseeko(stdin,0,0); in stdio.h... yes
 checking for -Wshadow... yes
 checking for -Wmaybe-uninitialized... yes
 checking for -fvisibility=hidden... yes
+checking for packages: bash-completion... no
+Failed commandline was:
+--------------------------------------------------
+pkg-config --exists bash-completion
+--------------------------------------------------
 
 platform:       X86_64
 byte order:     little-endian
@@ -68,7 +73,7 @@ shared:         no
 static:         no
 bashcompletion: no
 asm:            no
-interlaced:     no
+interlaced:     yes
 avs:            avxsynth
 lavf:           yes
 ffms:           yes
@@ -82,5 +87,5 @@ debug:          no
 gprof:          no
 strip:          no
 PIC:            no
-bit depth:      8
-chroma format:  420
+bit depth:      all
+chroma format:  444
