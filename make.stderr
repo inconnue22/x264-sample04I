@@ -1,0 +1,14 @@
+x264.c: In function ‘parse’:
+x264.c:1396:9: warning: variable ‘b_thread_input’ set but not used [-Wunused-but-set-variable]
+ 1396 |     int b_thread_input = 0;
+      |         ^~~~~~~~~~~~~~
+In file included from encoder/analyse.c:3894:
+encoder/slicetype.c: In function ‘slicetype_frame_cost’:
+encoder/slicetype.c:903:40: warning: variable ‘s’ set but not used [-Wunused-but-set-variable]
+  903 |                 x264_slicetype_slice_t s[X264_LOOKAHEAD_THREAD_MAX];
+      |                                        ^
+In file included from encoder/analyse.c:3894:
+encoder/slicetype.c: In function ‘slicetype_frame_cost’:
+encoder/slicetype.c:903:40: warning: variable ‘s’ set but not used [-Wunused-but-set-variable]
+  903 |                 x264_slicetype_slice_t s[X264_LOOKAHEAD_THREAD_MAX];
+      |                                        ^
