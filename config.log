@@ -1,0 +1,91 @@
+checking for -Werror=unknown-warning-option... no
+Failed commandline was:
+--------------------------------------------------
+gcc conftest.c  -Wall -I. -I$(SRCPATH)   -Werror=unknown-warning-option   -o conftest
+cc1: error: ‘-Werror=unknown-warning-option’: no option ‘-Wunknown-warning-option’
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -Werror=unknown-attributes... no
+Failed commandline was:
+--------------------------------------------------
+gcc conftest.c  -Wall -I. -I$(SRCPATH)   -Werror=unknown-attributes   -o conftest
+cc1: error: ‘-Werror=unknown-attributes’: no option ‘-Wunknown-attributes’; did you mean ‘-Wno-attributes’?
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -Werror=attributes... yes
+checking for -Werror=ignored-attributes... yes
+x264 configure script
+Command line options: "--disable-asm" "--disable-gpl" "--disable-thread" "--disable-win32thread" "--bit-depth=all" "--chroma-format=444" "--enable-bashcompletion"
+
+checking whether gcc works... yes
+checking whether gcc supports for( int i = 0; i < 9; i++ ); with -std=gnu99... yes
+checking whether gcc supports __attribute__((force_align_arg_pointer))... yes
+checking for -mpreferred-stack-boundary=6... yes
+checking for volatile float x = 2; return log2f(x); in math.h... yes
+checking for strtok_r(0, 0, 0); in string.h... yes
+checking for clock_gettime(CLOCK_MONOTONIC, 0); in time.h... yes
+checking whether defined(MAP_PRIVATE) is true... yes
+checking for MADV_HUGEPAGE; in sys/mman.h... yes
+checking for packages: libswscale libavutil... yes
+checking for sws_init_context(0,0,0); in libswscale/swscale.h... yes
+checking for AVComponentDescriptor x; x.depth = 8; in libavutil/pixdesc.h... yes
+checking for packages: libavformat libavcodec libavutil... yes
+checking for av_demuxer_iterate(0); in libavformat/avformat.h... yes
+checking for avcodec_send_packet(0,0); in libavcodec/avcodec.h... yes
+checking for packages: ffms2... no
+Failed commandline was:
+--------------------------------------------------
+pkg-config --exists ffms2
+--------------------------------------------------
+checking for FFMS_DestroyVideoSource(0); in ffms.h... yes
+checking whether FFMS_VERSION >= ((2 << 24) | (21 << 16) | (0 << 8) | 0) is true... yes
+checking for packages: liblsmash... no
+Failed commandline was:
+--------------------------------------------------
+pkg-config --exists liblsmash
+--------------------------------------------------
+checking for lsmash_destroy_root(0); in lsmash.h... yes
+checking whether LSMASH_VERSION_MAJOR > 1 || (LSMASH_VERSION_MAJOR == 1 && LSMASH_VERSION_MINOR >= 5) is true... yes
+checking for uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3}; in stdint.h... yes
+checking for -fno-tree-vectorize... yes
+checking for fseeko(stdin,0,0); in stdio.h... yes
+checking for -Wshadow... yes
+checking for -Wmaybe-uninitialized... yes
+checking for -fvisibility=hidden... yes
+checking for packages: bash-completion... no
+Failed commandline was:
+--------------------------------------------------
+pkg-config --exists bash-completion
+--------------------------------------------------
+
+platform:       X86_64
+byte order:     little-endian
+system:         LINUX
+cli:            yes
+libx264:        internal
+shared:         no
+static:         no
+bashcompletion: no
+asm:            no
+interlaced:     yes
+avs:            avxsynth
+lavf:           yes
+ffms:           yes
+mp4:            lsmash
+gpl:            no
+thread:         no
+opencl:         yes
+filters:        resize crop select_every
+lto:            no
+debug:          no
+gprof:          no
+strip:          no
+PIC:            no
+bit depth:      all
+chroma format:  444
