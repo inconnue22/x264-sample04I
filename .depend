@@ -294,19 +294,19 @@ common/mc-10.o: common/mc.c common/common.h common/base.h common/osdep.h \
  common/cabac.h common/bitstream.h common/set.h common/predict.h \
  common/pixel.h common/mc.h common/frame.h common/dct.h common/quant.h \
  common/threadpool.h common/macroblock.h common/x86/util.h \
- common/rectangle.h
+ common/rectangle.h common/x86/mc.h
 common/predict-10.o: common/predict.c common/common.h common/base.h \
  common/osdep.h config.h x264.h x264_config.h common/cpu.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
  common/quant.h common/threadpool.h common/macroblock.h common/x86/util.h \
- common/rectangle.h
+ common/rectangle.h common/x86/predict.h
 common/pixel-10.o: common/pixel.c common/common.h common/base.h \
  common/osdep.h config.h x264.h x264_config.h common/cpu.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
  common/quant.h common/threadpool.h common/macroblock.h common/x86/util.h \
- common/rectangle.h
+ common/rectangle.h common/x86/pixel.h common/x86/predict.h
 common/macroblock-10.o: common/macroblock.c common/common.h common/base.h \
  common/osdep.h config.h x264.h x264_config.h common/cpu.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
@@ -324,7 +324,7 @@ common/dct-10.o: common/dct.c common/common.h common/base.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
  common/quant.h common/threadpool.h common/macroblock.h common/x86/util.h \
- common/rectangle.h
+ common/rectangle.h common/x86/dct.h
 common/cabac-10.o: common/cabac.c common/common.h common/base.h \
  common/osdep.h config.h x264.h x264_config.h common/cpu.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
@@ -354,13 +354,13 @@ common/quant-10.o: common/quant.c common/common.h common/base.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
  common/quant.h common/threadpool.h common/macroblock.h common/x86/util.h \
- common/rectangle.h
+ common/rectangle.h common/x86/quant.h
 common/deblock-10.o: common/deblock.c common/common.h common/base.h \
  common/osdep.h config.h x264.h x264_config.h common/cpu.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
  common/quant.h common/threadpool.h common/macroblock.h common/x86/util.h \
- common/rectangle.h
+ common/rectangle.h common/x86/deblock.h
 common/vlc-10.o: common/vlc.c common/common.h common/base.h \
  common/osdep.h config.h x264.h x264_config.h common/cpu.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
@@ -378,7 +378,7 @@ common/bitstream-10.o: common/bitstream.c common/common.h common/base.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
  common/quant.h common/threadpool.h common/macroblock.h common/x86/util.h \
- common/rectangle.h
+ common/rectangle.h common/x86/bitstream.h
 encoder/analyse-10.o: encoder/analyse.c common/common.h common/base.h \
  common/osdep.h config.h x264.h x264_config.h common/cpu.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
@@ -436,12 +436,18 @@ encoder/lookahead-10.o: encoder/lookahead.c common/common.h common/base.h \
  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
  common/quant.h common/threadpool.h common/macroblock.h common/x86/util.h \
  common/rectangle.h encoder/analyse.h
-common/threadpool-10.o: common/threadpool.c common/common.h common/base.h \
+common/x86/mc-c-10.o: common/x86/mc-c.c common/common.h common/base.h \
  common/osdep.h config.h x264.h x264_config.h common/cpu.h \
  common/tables.h common/cabac.h common/bitstream.h common/set.h \
  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
  common/quant.h common/threadpool.h common/macroblock.h common/x86/util.h \
- common/rectangle.h
+ common/rectangle.h common/x86/mc.h
+common/x86/predict-c-10.o: common/x86/predict-c.c common/common.h \
+ common/base.h common/osdep.h config.h x264.h x264_config.h common/cpu.h \
+ common/tables.h common/cabac.h common/bitstream.h common/set.h \
+ common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+ common/quant.h common/threadpool.h common/macroblock.h common/x86/util.h \
+ common/rectangle.h common/x86/predict.h common/x86/pixel.h
 filters/video/cache-10.o: filters/video/cache.c filters/video/video.h \
  input/input.h x264cli.h common/base.h common/osdep.h config.h x264.h \
  x264_config.h common/cpu.h common/tables.h filters/filters.h \
@@ -454,13 +460,6 @@ filters/video/depth-10.o: filters/video/depth.c filters/video/video.h \
  input/input.h x264cli.h common/base.h common/osdep.h config.h x264.h \
  x264_config.h common/cpu.h common/tables.h filters/filters.h \
  filters/video/video.h common/common.h common/base.h common/cabac.h \
- common/bitstream.h common/set.h common/predict.h common/pixel.h \
- common/mc.h common/frame.h common/dct.h common/quant.h \
- common/threadpool.h common/macroblock.h common/x86/util.h \
- common/rectangle.h
-input/thread-10.o: input/thread.c input/input.h x264cli.h common/base.h \
- common/osdep.h config.h x264.h x264_config.h common/cpu.h \
- common/tables.h common/common.h common/base.h common/cabac.h \
  common/bitstream.h common/set.h common/predict.h common/pixel.h \
  common/mc.h common/frame.h common/dct.h common/quant.h \
  common/threadpool.h common/macroblock.h common/x86/util.h \
