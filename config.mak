@@ -15,7 +15,7 @@ COMPILER_STYLE=GNU
 DEPMM=-MM -g0
 DEPMT=-MT
 LD=gcc -o 
-LDFLAGS=-m64  -lm -ldl
+LDFLAGS=-m64  -lm -lpthread
 LDFLAGSCLI=-ldl -llsmash -lffms2  -lavformat -lavcodec -lavutil   -lswscale -lavutil  
 LIBX264=libx264.a
 CLI_LIBX264=$(LIBX264)
@@ -34,7 +34,7 @@ PROF_GEN_CC=-fprofile-generate
 PROF_GEN_LD=-fprofile-generate
 PROF_USE_CC=-fprofile-use
 PROF_USE_LD=-fprofile-use
-HAVE_OPENCL=yes
+HAVE_OPENCL=no
 CC_O=-o $@
 default: cli
 install: install-cli
