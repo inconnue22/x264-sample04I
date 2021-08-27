@@ -1,3 +1,7 @@
+./common/opencl.c:116:10: fatal error: common/oclobj.h: No such file or directory
+  116 | #include "common/oclobj.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
 x264.c: In function ‘parse’:
 x264.c:1396:9: warning: variable ‘b_thread_input’ set but not used [-Wunused-but-set-variable]
  1396 |     int b_thread_input = 0;
@@ -9,7 +13,7 @@ encoder/slicetype.c:903:40: warning: variable ‘s’ set but not used [-Wunused
       |                                        ^
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
-encoder/set.c: In function ‘x264_10_sei_recovery_point_write’:
+encoder/set.c: In function ‘x264_8_sei_recovery_point_write’:
 ./common/bitstream.h:120:23: warning: array subscript 0 is outside array bounds of ‘uint8_t[100]’ {aka ‘unsigned char[100]’} [-Warray-bounds]
   120 |         s->cur_bits = endian_fix32( M32(s->p) );
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,7 +31,7 @@ encoder/set.c:577:5: note: in expansion of macro ‘ALIGNED_4’
       |     ^~~~~~~~~
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
-encoder/set.c: In function ‘x264_10_sei_buffering_period_write’:
+encoder/set.c: In function ‘x264_8_sei_buffering_period_write’:
 ./common/bitstream.h:120:23: warning: array subscript 0 is outside array bounds of ‘uint8_t[100]’ {aka ‘unsigned char[100]’} [-Warray-bounds]
   120 |         s->cur_bits = endian_fix32( M32(s->p) );
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +49,7 @@ encoder/set.c:629:5: note: in expansion of macro ‘ALIGNED_4’
       |     ^~~~~~~~~
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
-encoder/set.c: In function ‘x264_10_sei_pic_timing_write’:
+encoder/set.c: In function ‘x264_8_sei_pic_timing_write’:
 ./common/bitstream.h:120:23: warning: array subscript 0 is outside array bounds of ‘uint8_t[100]’ {aka ‘unsigned char[100]’} [-Warray-bounds]
   120 |         s->cur_bits = endian_fix32( M32(s->p) );
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -63,7 +67,7 @@ encoder/set.c:651:5: note: in expansion of macro ‘ALIGNED_4’
       |     ^~~~~~~~~
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
-encoder/set.c: In function ‘x264_10_sei_frame_packing_write’:
+encoder/set.c: In function ‘x264_8_sei_frame_packing_write’:
 ./common/bitstream.h:120:23: warning: array subscript 0 is outside array bounds of ‘uint8_t[100]’ {aka ‘unsigned char[100]’} [-Warray-bounds]
   120 |         s->cur_bits = endian_fix32( M32(s->p) );
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -81,7 +85,7 @@ encoder/set.c:682:5: note: in expansion of macro ‘ALIGNED_4’
       |     ^~~~~~~~~
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
-encoder/set.c: In function ‘x264_10_sei_mastering_display_write’:
+encoder/set.c: In function ‘x264_8_sei_mastering_display_write’:
 ./common/bitstream.h:120:23: warning: array subscript 0 is outside array bounds of ‘uint8_t[100]’ {aka ‘unsigned char[100]’} [-Warray-bounds]
   120 |         s->cur_bits = endian_fix32( M32(s->p) );
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,7 +103,7 @@ encoder/set.c:723:5: note: in expansion of macro ‘ALIGNED_4’
       |     ^~~~~~~~~
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
-encoder/set.c: In function ‘x264_10_sei_content_light_level_write’:
+encoder/set.c: In function ‘x264_8_sei_content_light_level_write’:
 ./common/bitstream.h:120:23: warning: array subscript 0 is outside array bounds of ‘uint8_t[100]’ {aka ‘unsigned char[100]’} [-Warray-bounds]
   120 |         s->cur_bits = endian_fix32( M32(s->p) );
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -117,7 +121,7 @@ encoder/set.c:748:5: note: in expansion of macro ‘ALIGNED_4’
       |     ^~~~~~~~~
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
-encoder/set.c: In function ‘x264_10_sei_alternative_transfer_write’:
+encoder/set.c: In function ‘x264_8_sei_alternative_transfer_write’:
 ./common/bitstream.h:120:23: warning: array subscript 0 is outside array bounds of ‘uint8_t[100]’ {aka ‘unsigned char[100]’} [-Warray-bounds]
   120 |         s->cur_bits = endian_fix32( M32(s->p) );
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -135,7 +139,7 @@ encoder/set.c:765:5: note: in expansion of macro ‘ALIGNED_4’
       |     ^~~~~~~~~
 In file included from ./common/common.h:122,
                  from encoder/set.c:27:
-encoder/set.c: In function ‘x264_10_sei_dec_ref_pic_marking_write’:
+encoder/set.c: In function ‘x264_8_sei_dec_ref_pic_marking_write’:
 ./common/bitstream.h:120:23: warning: array subscript 0 is outside array bounds of ‘uint8_t[100]’ {aka ‘unsigned char[100]’} [-Warray-bounds]
   120 |         s->cur_bits = endian_fix32( M32(s->p) );
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
