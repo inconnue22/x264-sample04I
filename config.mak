@@ -15,7 +15,7 @@ COMPILER_STYLE=GNU
 DEPMM=-MM -g0
 DEPMT=-MT
 LD=gcc -o 
-LDFLAGS=-m64  -lm -lpthread
+LDFLAGS=-m64  -lm -lpthread -ldl
 LDFLAGSCLI=-ldl -llsmash -lffms2  -lavformat -lavcodec -lavutil   -lswscale -lavutil  
 LIBX264=libx264.a
 CLI_LIBX264=$(LIBX264)
@@ -23,7 +23,7 @@ AR=gcc-ar rc
 RANLIB=gcc-ranlib
 STRIP=strip
 INSTALL=install
-AS=
+AS=nasm
 ASFLAGS= -I. -I$(SRCPATH) -DARCH_X86_64=1 -I$(SRCPATH)/common/x86/ -f elf64 -DSTACK_ALIGNMENT=64
 RC=
 RCFLAGS=
@@ -34,7 +34,7 @@ PROF_GEN_CC=-fprofile-generate
 PROF_GEN_LD=-fprofile-generate
 PROF_USE_CC=-fprofile-use
 PROF_USE_LD=-fprofile-use
-HAVE_OPENCL=no
+HAVE_OPENCL=yes
 CC_O=-o $@
 default: cli
 install: install-cli
